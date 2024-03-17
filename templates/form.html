@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <h1>Student Information Form</h1>
+    <form action="/add_data" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="fatherName">Father's Name:</label>
+        <input type="text" id="fatherName" name="fatherName" required><br>
+
+        <label for="motherName">Mother's Name:</label>
+        <input type="text" id="motherName" name="motherName" required><br>
+
+        <label for="rollNo">Roll Number:</label>
+        <input type="text" id="rollNo" name="rollNo" required><br>
+
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required><br>
+
+        <label for="course">Course Enrolled:</label>
+        <select id="course" name="course">
+            <option value="Select">-----------Select Branch-----------</option>
+            <option value="Computer">Computer Science Engineering</option>
+            <option value="Information">Information Technology Engineering</option>
+            <option value="Mechanical">Mechanical engineering</option>
+            <option value="Aerospace">Aerospace engineering</option>
+            <option value="Chemical">Chemical engineering</option>
+            <option value="Electrical ">Electrical  engineering</option>
+            <option value="Electronics">Electronics and Communications engineering</option>
+            <!-- Add more options as needed -->
+        </select><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required><br>
+
+        <label for="email">Email ID:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="4" cols="50" required></textarea><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
